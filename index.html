@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandera de México</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      color: #222222;
+      font-weight: normal;
+    }
+
+    .bandera-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 750px;
+      border: 1px solid #333333;
+      padding: 15px;
+      background-color: #ffffff;
+    }
+
+    .columna {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .columna label {
+      font-size: 0.75rem;
+      color: #555555;
+      margin-bottom: 10px;
+      text-align: center;
+      height: 25px;
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .hex-val {
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #333333;
+    }
+
+    .color-box {
+      width: 100%;
+      height: 220px;
+    }
+
+    .escudo-container {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .escudo-container img {
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: contain;
+    }
+
+    .alumnos-info {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333333;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bandera de México</h1>
+
+  <div class="bandera-container">
+    
+    <!-- Columna Verde -->
+    <div class="columna">
+      <label>Esperanza</label>
+      <input type="range" id="sliderVerde" min="0" max="255" value="153">
+      <span id="valVerde" class="hex-val">#009900</span>
+      <div id="cajaVerde" class="color-box"></div>
+    </div>
+
+    <!-- Columna Blanca (Escudo) -->
+    <div class="columna">
+      <label>Unidad</label>
+      <span class="hex-val">#FFFFFF</span>
+      <div class="escudo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Coat_of_arms_of_Mexico.svg" alt="Escudo Nacional de México">
+      </div>
+    </div>
+
+    <!-- Columna Roja -->
+    <div class="columna">
+      <label>Sangre de nuestros héroes nacionales</label>
+      <input type="range" id="sliderRojo" min="0" max="255" value="157">
+      <span id="valRojo" class="hex-val">#9D0000</span>
+      <div id="cajaRojo" class="color-box"></div>
+    </div>
+
+  </div>
+
+  <footer class="alumnos-info">
+    <p><strong>Alumno:</strong> Gamaliel Jimenez Oropeza</p>
+    <p><strong>Número de Control:</strong> 23200855</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
